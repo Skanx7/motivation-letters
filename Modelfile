@@ -1,0 +1,29 @@
+# Gemma 4 with a wider context window for the motivation_letters pipeline.
+# We cap num_ctx at 32K because the agents combine crawled markdown (~10-15K
+# chars), CV+examples (~5K), and headroom for output. Going larger only burns
+# VRAM without helping this workload.
+#
+# Pick the base model that fits your hardware:
+#   gemma4:4b    - ~4 GB VRAM at 32K ctx, fast, weakest reasoning
+#   gemma4:12b   - ~14 GB VRAM at 32K ctx, strong all-rounder (recommended)
+#   gemma4:26b   - ~28 GB VRAM at 32K ctx, best quality, needs a 24-32GB GPU
+#
+# Build:   ollama create motivation-gemma -f Modelfile
+# Use:     set OLLAMA_MODEL=motivation-gemma in .env
+
+FROM gemma4:e4b
+
+# Context window. Bump to 65536 if you regularly hit "OLLAMA_NUM_CTX too small";
+# drop to 16384 if you are GPU-poor.
+PARAMETER num_ctx 65536
+
+# Max tokens the model may emit per response. The critic's structured JSON in
+# French can be ~1.5K tokens; 4K leaves headroom and avoids truncation.
+PARAMETER num_predict 4096
+
+# Sane defaults; the agents override temperature per-call (writer 0.7, critic 0.2,
+# retriever 0.0) so this only matters if you call the model directly.
+PARAMETER temperature 0.7
+PARAMETER top_p 0.95
+PARAMETER top_k 40
+PARAMETER repeat_penalty 1.1

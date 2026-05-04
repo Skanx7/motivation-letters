@@ -1,0 +1,42 @@
+examples:
+  -  job_offering: |
+      Descriptif du poste
+      Rejoignez une entreprise à taille humaine et en croissance, au service de plus de 3 millions de clients,
+      et qui se positionne sur tous les segments de l'assurance.
+
+      1/ Quels seront vos futurs challenges ?
+      Dans le cadre de vos missions, vous serez amené(e) à :
+
+      * Réaliser l'extraction et la préparation des données,
+      * Créer, tester, comparer des modèles prédictifs en utilisant des modèles statistiques ou de Machine Learning
+        (méthodes d'apprentissage supervisé tels que random forest, extrem gradient boosting, support vector machine,
+        réseaux de neurones, ainsi que méthodes d'apprentissage non supervisé),
+      * Préparer la mise en production des modèles,
+      * Présenter et documenter les travaux réaliser.
+
+      2/ Dans quel environnement évoluerez-vous ?
+      Au sein de la Direction IARD & Santé, l'équipe R&D Data Science réalise des travaux de détection
+      et de lutte contre la fraude.
+
+      3/ Etes-vous la personne qui saura relever ce challenge ?
+      Vous êtes actuellement en formation supérieure en Master 2 Data Sciences, Statistiques ou Ecole d'Ingénieur.
+
+      4/ Modalités pratiques :
+      * Durée : Stage 6 mois
+      * Date de démarrage : Mars 2026
+      * Lieu : Bois-Colombes (92)
+
+  - motivation: |
+      Bonjour, Ayant déjà travaille dans une société d'assurance, je pense que je ne serai pas dépaysé
+      par cette position. Je maitrise très bien Python et les frameworks principaux de deep learning
+      (Pytorch et tensorflow). Je suis aussi a l'aise en machine learning plus classique pour des données
+      plus tabulaires via scikit-learn ou autres librairies comme xgboost, catboost, etc… qui reposent
+      sur la même syntaxe. Je sais aussi passer du notebook a la prod' que ce soit en servant le modèle
+      dans une api (je suis plus a l'aise avec fastapi que flask) ou un serveur d'inférence (comme nvidia triton).
+
+      Je suis d'ailleurs actuellement en train de me former sur l'IA agentique et la RAG (avec llamaindex
+      et langchain) et je pense que ce serait un plus pour créer des nouveaux features a utiliser dans les
+      modèles classiques, je pensais par exemple a utiliser un réseau siamois avec les embeddings de constats
+      comme feature extractor pour un modèle xgboost.
+
+      Bref, je suis motivé et j'ai pas mal d'idées que j'aimerais mettre en pratique sur ce genre de poste.
